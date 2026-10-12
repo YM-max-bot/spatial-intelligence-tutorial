@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="IEEE tutorial website for Spatial Intelligence for Wireless Communications and Sensing by HKUST iComAI Lab."
+    />
+    <title>Spatial Intelligence for Wireless Communications and Sensing</title>
+    <link rel="stylesheet" href="styles.css?v=20261012" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="#top" aria-label="iComAI Lab homepage">
+          <img
+            class="brand-logo"
+            src="assets/images/icomai-lab-logo-white.png"
+            alt="iComAI Lab"
+            height="36"
+          />
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#overview">Overview</a>
+          <a href="#outline">Outline</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#materials">Materials</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <h1>Spatial Intelligence for Wireless Communications and Sensing</h1>
+          <p class="hero-subtitle">Methods to Applications</p>
+          <p class="hero-text">
+            From wireless radiation fields to world models: a half-day tutorial by HKUST
+            iComAI Lab on reusable spatial knowledge for 6G communications, sensing,
+            and embodied agents.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#outline">View Tutorial Outline</a>
+            <a class="button secondary" href="assets/slides/spatial_intelligence_tutorial_notes.pdf">Download Slides (PDF)</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="hero-image"
+            src="assets/images/tutorial-roadmap.png"
+            alt="Tutorial roadmap from foundations and 3D-GS to generalization and applications"
+          />
+        </div>
+      </section>
+
+      <section class="section overview-section" id="overview">
+        <div class="overview-copy">
+          <p class="eyebrow">Tutorial Motivation</p>
+          <h2>Why Spatial Intelligence?</h2>
+          <p class="pull-quote">
+            Move wireless systems from link-level optimization to spatial intelligence.
+          </p>
+          <p>
+            Next-generation networks are becoming AI-native, but a deeper bottleneck remains:
+            we still understand channels as short-window, per-link samples, while the physical
+            world is a continuous, shared, and reusable 3D space.
+          </p>
+          <p>
+            Massive MIMO, ultra-reliable low latency, mixed bands, and dense deployment all
+            ask the same question: when pilots are scarce, CSI is imperfect, and environments
+            change rapidly, how do communications and sensing upgrade from estimating one link
+            to understanding one space?
+          </p>
+          <p>
+            <strong>Spatial intelligence</strong> answers this by treating wireless channels as
+            shared projections of the physical environment, building reusable spatial priors
+            through wireless radiation fields and world models—so networks can not only transmit,
+            but also reason, predict, and plan in space.
+          </p>
+        </div>
+        <figure class="overview-figure">
+          <img
+            src="assets/images/spatial-intelligence-city.png"
+            alt="Urban multipath propagation: a base station serving a mobile receiver through direct and reflected paths"
+          />
+          <figcaption>
+            Geometry shapes wireless: LoS and multipath are projections of the same 3D scene.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Learning Outcomes</p>
+        <h2>After This Tutorial, Attendees Will Understand</h2>
+        <div class="card-grid four">
+          <article class="card">
+            <h3>Spatial Channel Modeling</h3>
+            <p>How to move from stochastic channel descriptions to geometry-conditioned models.</p>
+          </article>
+          <article class="card">
+            <h3>3D-GS For Wireless</h3>
+            <p>How 3D Gaussian Splatting can support wireless radiance field reconstruction.</p>
+          </article>
+          <article class="card">
+            <h3>Spatial Intelligence Generalization</h3>
+            <p>How datasets, few-shot adaptation, and cross-scene transfer shape spatial intelligence.</p>
+          </article>
+          <article class="card">
+            <h3>6G Applications</h3>
+            <p>How spatial intelligence enables positioning, planning, UAV networking, and embodied AI.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="outline">
+        <p class="eyebrow">Half-Day Program</p>
+        <h2>Tutorial Outline</h2>
+        <p class="section-lead">
+          Aligned with the slide deck
+          <a class="inline-link" href="assets/slides/spatial_intelligence_tutorial_notes.pdf">Spatial Intelligence Tutorial (PDF with notes)</a>.
+        </p>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="time">Part I</span>
+            <div>
+              <h3>Vision for Wireless Spatial Intelligence</h3>
+              <ul class="outline-list">
+                <li>Why is reusable spatial knowledge needed?</li>
+                <li>What is the wireless spatial field?</li>
+                <li>How should wireless space be represented?</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="time">Part II</span>
+            <div>
+              <h3>3D-GS Methods for Spatially Intelligent Channel Modelling</h3>
+              <ul class="outline-list">
+                <li>
+                  <a class="inline-link" href="https://arxiv.org/abs/2412.04832" target="_blank" rel="noopener noreferrer">WRF-GS</a>:
+                  wireless field reconstruction
+                </li>
+                <li>
+                  From WRF to
+                  <a class="inline-link" href="https://ieeexplore.ieee.org/document/11258087" target="_blank" rel="noopener noreferrer">WRF-GS+</a>
+                </li>
+                <li>
+                  Temporal non-stationarity and mobility-aware modelling —
+                  <a class="inline-link" href="https://arxiv.org/abs/2605.16094" target="_blank" rel="noopener noreferrer">GeoGS-CE</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="time">Part III</span>
+            <div>
+              <h3>Radio Map &amp; Spatial Intelligence Generalization</h3>
+              <ul class="outline-list">
+                <li>
+                  Few/Zero-shot generalization in a single scene —
+                  <a class="inline-link" href="https://arxiv.org/abs/2601.19216" target="_blank" rel="noopener noreferrer">URF-GS</a>
+                </li>
+                <li>
+                  Generalization across scenes —
+                  <a class="inline-link" href="https://arxiv.org/abs/2607.28994" target="_blank" rel="noopener noreferrer">Point2Radio</a>
+                </li>
+                <li>
+                  Indoor positioning —
+                  <a class="inline-link" href="https://arxiv.org/abs/2608.09285" target="_blank" rel="noopener noreferrer">GLocFM</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="time">Part IV</span>
+            <div>
+              <h3>Spatial-Intelligent Enabled Applications</h3>
+              <ul class="outline-list">
+                <li>Intelligent Agents</li>
+                <li>Beamforming</li>
+                <li>AP Deployment and Low-altitude Spatial Intelligence</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="time">Part V</span>
+            <div>
+              <h3>Conclusions &amp; Outlook</h3>
+              <ul class="outline-list">
+                <li>Conclusions</li>
+                <li>Outlook toward wireless world models</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="speakers">
+        <p class="eyebrow">Tutorial Team</p>
+        <h2>Speakers</h2>
+        <div class="card-grid speakers">
+          <article class="speaker-card">
+            <img class="avatar photo" src="assets/images/jun-zhang.jpg" alt="Prof. Jun Zhang" width="72" height="72" />
+            <h3>Jun Zhang <span class="cn-name">张军</span></h3>
+            <p class="speaker-role">Professor, HKUST. IEEE Fellow.</p>
+            <p>Wireless communications, networking, edge AI, and cooperative AI.</p>
+            <div class="speaker-meta">
+              <a href="mailto:eejzhang@ust.hk">eejzhang@ust.hk</a>
+              <a href="https://scholar.google.com/citations?user=1Is687QAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
+          </article>
+          <article class="speaker-card">
+            <img class="avatar photo" src="assets/images/jiajia-guo.jpg" alt="Prof. Jiajia Guo" width="72" height="72" />
+            <h3>Jiajia Guo <span class="cn-name">郭佳佳</span></h3>
+            <p class="speaker-role">Research Assistant Professor, HKUST.</p>
+            <p>AI-native air interface, massive MIMO, ISAC, and large AI models.</p>
+            <div class="speaker-meta">
+              <a href="mailto:eejiajiaguo@ust.hk">eejiajiaguo@ust.hk</a>
+              <a href="https://scholar.google.com/citations?user=WN7-Mz4AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
+          </article>
+          <article class="speaker-card">
+            <img class="avatar photo" src="assets/images/yumeng-zhang.jpg" alt="Dr. Yumeng Zhang" width="72" height="72" />
+            <h3>Yumeng Zhang <span class="cn-name">张宇萌</span></h3>
+            <p class="speaker-role">Post-Doctoral Fellow, HKUST.</p>
+            <p>AI for wireless, sensing, ISAC, massive MIMO, and channel estimation.</p>
+            <div class="speaker-meta">
+              <a href="mailto:eeyzhang@ust.hk">eeyzhang@ust.hk</a>
+              <a href="https://scholar.google.com/citations?user=ueArr5YAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
+          </article>
+          <article class="speaker-card">
+            <img class="avatar photo" src="assets/images/chenghong-bian.jpg" alt="Dr. Chenghong Bian" width="72" height="72" />
+            <h3>Chenghong Bian <span class="cn-name">卞程泓</span></h3>
+            <p class="speaker-role">Post-Doctoral Fellow, HKUST.</p>
+            <p>Wireless communications, machine learning, and sensing.</p>
+            <div class="speaker-meta">
+              <a href="mailto:eechbian@ust.hk">eechbian@ust.hk</a>
+              <a href="https://scholar.google.com/citations?user=BFGfrBIAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="thanks-block">
+          <p class="eyebrow">Special Thanks</p>
+          <p class="thanks-lead">Featured contributor to the tutorial materials and core demos.</p>
+          <div class="card-grid speakers thanks-grid">
+            <article class="speaker-card featured-thanks">
+              <img class="avatar photo" src="assets/images/chaozheng-wen.jpg" alt="Mr. Chaozheng Wen" width="72" height="72" />
+              <h3>Chaozheng Wen <span class="cn-name">温朝政</span></h3>
+              <p class="speaker-role">PhD Student, HKUST iComAI Lab.</p>
+              <p>
+                3D Gaussian Splatting for wireless radiation field reconstruction and radio map learning
+                (WRF-GS, URF-GS, Point2Radio).
+              </p>
+              <div class="speaker-meta">
+                <a href="mailto:cwenae@connect.ust.hk">cwenae@connect.ust.hk</a>
+                <a href="https://scholar.google.com/citations?user=WiNHYsUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="https://github.com/wenchaozheng" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="ack-block">
+          <p class="eyebrow">Acknowledgments</p>
+          <p class="thanks-lead">
+            For significant contributions to the tutorial materials, we also thank:
+          </p>
+          <ul class="ack-list">
+            <li>
+              <strong>Mr. Yijie Bian <span class="cn-name">卞艺杰</span></strong>
+              <span class="ack-note">For beamforming applications</span>
+              <div class="ack-meta">
+                <a class="ack-mail" href="mailto:ybianaf@connect.ust.hk">ybianaf@connect.ust.hk</a>
+                <a
+                  class="ack-link"
+                  href="https://scholar.google.com/citations?user=6ezUG60AAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Google Scholar</a>
+              </div>
+            </li>
+            <li>
+              <strong>Dr. Ziqi Ke <span class="cn-name">柯子琦</span></strong>
+              <span class="ack-note">For UAV applications</span>
+              <div class="ack-meta">
+                <a class="ack-mail" href="mailto:zqke24@m.fudan.edu.cn">zqke24@m.fudan.edu.cn</a>
+                <a
+                  class="ack-link"
+                  href="https://scholar.google.com/citations?user=c8WxYpcAAAAJ&amp;hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Google Scholar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section conference-section">
+        <p class="eyebrow">Conference Versions</p>
+        <h2>Accepted Tutorials</h2>
+        <div class="card-grid two">
+          <article class="card highlight">
+            <h3>IEEE ICCC 2026</h3>
+            <p class="conf-meta"><strong>Date</strong> Aug 7, 2026 (Thu), 14:00–18:00</p>
+            <p class="conf-meta"><strong>Venue</strong> Hall 3-6, China Optics Valley Convention &amp; Exhibition Center, Wuhan</p>
+            <p class="conf-meta"><strong>Host</strong> IEEE International Conference on Communications in China</p>
+            <p>From wireless radiation fields to world models — a half-day path through vision, 3D-GS methods, generalization, and applications.</p>
+          </article>
+          <article class="card highlight">
+            <h3>IEEE GLOBECOM 2026</h3>
+            <p>Conference-specific time, venue, registration link, and released materials will be added here.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="materials">
+        <p class="eyebrow">Resources</p>
+        <h2>Materials</h2>
+        <div class="resource-list">
+          <a class="resource-card" href="assets/slides/spatial_intelligence_tutorial_notes.pdf">
+            <span>Slides</span>
+            <strong>Tutorial PDF (with notes)</strong>
+          </a>
+          <a class="resource-card" href="#key-papers">
+            <span>Reference Papers</span>
+            <strong>Key papers below</strong>
+          </a>
+          <a class="resource-card" href="#" aria-disabled="true">
+            <span>Demo Notebooks</span>
+            <strong>Coming soon</strong>
+          </a>
+          <a class="resource-card" href="#" aria-disabled="true">
+            <span>Code / Datasets</span>
+            <strong>Coming soon</strong>
+          </a>
+        </div>
+
+        <div class="paper-block" id="key-papers">
+          <h3>Key Papers (Parts II–IV)</h3>
+          <ul class="paper-list">
+            <li>
+              <a href="https://arxiv.org/abs/2412.04832" target="_blank" rel="noopener noreferrer">WRF-GS</a>
+              —
+              <a href="https://doi.org/10.1109/INFOCOM55648.2025.11044513" target="_blank" rel="noopener noreferrer">Wireless Radiation Field Reconstruction with 3D Gaussian Splatting</a>
+              (INFOCOM 2025;
+              <a href="https://arxiv.org/abs/2412.04832" target="_blank" rel="noopener noreferrer">arXiv</a>)
+            </li>
+            <li>
+              <a href="https://ieeexplore.ieee.org/document/11258087" target="_blank" rel="noopener noreferrer">WRF-GS+</a>
+              —
+              <a href="https://ieeexplore.ieee.org/document/11258087" target="_blank" rel="noopener noreferrer">Neural Representation for Wireless Radiation Field Reconstruction: A 3D Gaussian Splatting Approach</a>
+              (IEEE TWC 2025;
+              <a href="https://arxiv.org/abs/2412.04832" target="_blank" rel="noopener noreferrer">arXiv</a>)
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2605.16094" target="_blank" rel="noopener noreferrer">GeoGS-CE</a>
+              —
+              <a href="https://arxiv.org/abs/2605.16094" target="_blank" rel="noopener noreferrer">Learning Delay–Beam Channel Priors with 3D Gaussians for High-Mobility Scenarios</a>
+              (<a href="https://arxiv.org/abs/2605.16094" target="_blank" rel="noopener noreferrer">arXiv</a>)
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2601.19216" target="_blank" rel="noopener noreferrer">URF-GS</a>
+              —
+              <a href="https://arxiv.org/abs/2601.19216" target="_blank" rel="noopener noreferrer">Bridging Visual and Wireless Sensing via a Unified Radiation Field for 3D Radio Map Construction</a>
+              (<a href="https://arxiv.org/abs/2601.19216" target="_blank" rel="noopener noreferrer">arXiv</a>)
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2607.28994" target="_blank" rel="noopener noreferrer">Point2Radio</a>
+              —
+              <a href="https://arxiv.org/abs/2607.28994" target="_blank" rel="noopener noreferrer">A Foundation Model for Cross-Scene Radio Fields from Material-Aware Point Clouds</a>
+              (<a href="https://arxiv.org/abs/2607.28994" target="_blank" rel="noopener noreferrer">arXiv</a>)
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2608.09285" target="_blank" rel="noopener noreferrer">GLocFM</a>
+              —
+              <a href="https://arxiv.org/abs/2608.09285" target="_blank" rel="noopener noreferrer">A Geometry-Aware Foundation Model for 3D Indoor Wireless Localization</a>
+              (<a href="https://arxiv.org/abs/2608.09285" target="_blank" rel="noopener noreferrer">arXiv</a>)
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2608.05896" target="_blank" rel="noopener noreferrer">GSBF</a>
+              —
+              <a href="https://arxiv.org/abs/2608.05896" target="_blank" rel="noopener noreferrer">Gaussian Splatting for Environment-Aware Beamforming</a>
+              (<a href="https://arxiv.org/abs/2608.05896" target="_blank" rel="noopener noreferrer">arXiv</a>)
+            </li>
+          </ul>
+        </div>
+
+        <div class="code-block" id="related-code">
+          <h3>Related Repositories</h3>
+          <ul class="paper-list">
+            <li>
+              <a href="https://github.com/wenchaozheng" target="_blank" rel="noopener noreferrer">Chaozheng Wen</a>
+              —
+              <a href="https://github.com/wenchaozheng/WRF-GS" target="_blank" rel="noopener noreferrer">WRF-GS</a>,
+              <a href="https://github.com/wenchaozheng/WRF-GSplus" target="_blank" rel="noopener noreferrer">WRF-GS+</a>,
+              <a href="https://github.com/wenchaozheng/URF-GS" target="_blank" rel="noopener noreferrer">URF-GS</a>,
+              <a href="https://github.com/wenchaozheng/Point2Radio" target="_blank" rel="noopener noreferrer">Point2Radio</a>
+            </li>
+            <li>
+              <a href="https://github.com/AI4Wireless/3DGS_for_Wireless" target="_blank" rel="noopener noreferrer">3DGS for Wireless</a>
+              — curated paper collection on 3D Gaussian Splatting for wireless communications
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="contact-pi">
+        <strong>HKUST iComAI Lab</strong>
+        <p class="contact-name">Prof. Jun Zhang <span class="cn-name">张军</span></p>
+        <p class="contact-title">
+          Fellow, IEEE · Full Professor, Department of Electronic and Computer Engineering, HKUST ·
+          Clarivate Highly Cited Researcher
+        </p>
+        <p class="contact-role">iComAI Lab Principal Investigator</p>
+        <a href="mailto:eejzhang@ust.hk">eejzhang@ust.hk</a>
+      </div>
+      <div class="wechat-card">
+        <img
+          src="assets/images/icomai-wechat-qr.jpg"
+          alt="iComAI WeChat official account QR code"
+          width="148"
+          height="148"
+        />
+        <div>
+          <strong>iComAI 公众号</strong>
+          <span>扫码关注组内动态与 tutorial 更新</span>
+        </div>
+      </div>
+    </footer>
+
+    <aside class="site-stats" aria-label="Tutorial visit statistics" aria-live="polite">
+      <span class="site-stats-item">
+        Page views <strong id="busuanzi_page_pv">—</strong>
+      </span>
+      <span class="site-stats-item" title="Visitors are deduplicated according to the statistics service; this is not an exact count of people.">
+        Visitors <strong id="busuanzi_page_uv">—</strong>
+      </span>
+      <small class="site-stats-status">Loading visit statistics…</small>
+      <noscript>Enable JavaScript to view visit statistics.</noscript>
+    </aside>
+
+    <script src="script.js?v=20261012"></script>
+  </body>
+</html>

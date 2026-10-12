@@ -1,0 +1,24 @@
+# Allow only the public website and its approved assets.
+*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/styles.css
+!/script.js
+!/website-qr.png
+!/assets/
+!/assets/fonts/
+!/assets/fonts/IBMPlexSans-Variable.ttf
+!/assets/fonts/OFL.txt
+!/assets/images/
+!/assets/images/chaozheng-wen.jpg
+!/assets/images/chenghong-bian.jpg
+!/assets/images/icomai-lab-logo-white.png
+!/assets/images/icomai-wechat-qr.jpg
+!/assets/images/jiajia-guo.jpg
+!/assets/images/jun-zhang.jpg
+!/assets/images/spatial-intelligence-city.png
+!/assets/images/tutorial-roadmap.png
+!/assets/images/yumeng-zhang.jpg
+!/assets/slides/
+!/assets/slides/spatial_intelligence_tutorial_notes.pdf
